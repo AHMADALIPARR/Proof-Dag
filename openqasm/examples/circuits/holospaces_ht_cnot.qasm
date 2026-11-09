@@ -1,0 +1,20 @@
+OPENQASM 3.0;
+include "stdgates.inc";
+
+qubit[4] q;
+
+// For each qubit: H then T, then CNOT chain from previous
+h q[0];
+t q[0];
+
+h q[1];
+t q[1];
+cx q[0], q[1];
+
+h q[2];
+t q[2];
+cx q[1], q[2];
+
+h q[3];
+t q[3];
+cx q[2], q[3];
