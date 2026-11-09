@@ -1,6 +1,6 @@
-# Holospaces
+# ProofDag
 
-Holospaces is an open, proof-carrying compilation system for reproducible quantum software. It represents programs, transformations, executable artifacts, formal proofs, test evidence, and benchmark results as one immutable content-addressed graph.
+ProofDag is an open, proof-carrying compilation system for reproducible quantum software. It represents programs, transformations, executable artifacts, formal proofs, test evidence, and benchmark results as one immutable content-addressed graph.
 
 Every node in the graph represents a typed scientific claim:
 - "This parser produced this AST."
