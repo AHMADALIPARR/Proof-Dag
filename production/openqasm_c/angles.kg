@@ -1,0 +1,4 @@
+/:- "angles.kg"
+// Rotation angles in MILLRADIANS (host converts to radians)
+// Example: α = 157 → 0.157 rad, β = 314 → 0.314 rad
+angles :: :array[157 314]
