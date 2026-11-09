@@ -11,6 +11,3 @@ ProofDag is an open, proof-carrying compilation system that treats every artifac
 Programs, transformations, executable kernels, formal proofs, test evidence, and benchmark results are all first-class nodes. Every edge records a precise dependency or justification. The result is a fully reproducible, auditable, and explainable quantum software stack.
 
 > “This parser produced this AST.”  
-> “This transformation preserves semantics under these assumptions.”  
-> “This circuit is equivalent to this exact reference model.”  
-> “This claim was proved, tested, simulated, or merely asserted.”
