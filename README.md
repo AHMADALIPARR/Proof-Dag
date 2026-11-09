@@ -102,3 +102,10 @@ All are faithful structural models of the patterns present in the supplied code.
 ## Expanded OpenQASM Circuit Collection
 
 Further advanced circuits (QPE, QAOA, QFT, error-correction, teleportation, etc.) are in `openqasm/examples/circuits/`.
+
+## ATS Type-Checked Graph (DAG)
+
+The DAG specification (`holospace_example`) is implemented and verified using Applied Type System (ATS2) under `production/ats_dag/`:
+- Statically type-checked DAG vertices and edges (`DAG_EDGE`, `DAG_PATH`, `TOPOLOGICAL_ORDER`)
+- Verified node operators: `extract` (Python function), `transform` (Python function), and `load` (Bash command)
+- Fully type-checked DAG construction and execution runner
