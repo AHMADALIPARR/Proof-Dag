@@ -57,7 +57,7 @@ in
 end
 
 implement {u,v,w} verify_dag_topology (dag) = let
-  val DAG_Spec (pf_order | dag_id, schedule, start_date) = dag
+  val+ @DAG_Spec (pf_order | dag_id, schedule, start_date) = dag
   prval path = make_full_path ()
   val () = println! ("[ATS TYPE-CHECK] DAG '", dag_id, "' statically verified:")
   val () = println! ("  Schedule:   ", schedule)
@@ -68,13 +68,15 @@ implement {u,v,w} verify_dag_topology (dag) = let
   val () = println! ("  Verified Transitive Reachability:")
   val () = println! ("    [extract]   ~*> [load]       (witnessed by DAG_PATH proof)")
   val () = println! ("  Type check result: PROVEN ACYCLIC & FULLY ORDERED")
+  prval () = fold@ (dag)
 in
   ()
 end
 
 implement {u,v,w} execute_dag (dag) = let
   val () = verify_dag_topology (dag)
-  val DAG_Spec (pf_order | dag_id, schedule, start_date) = dag
+  val+ @DAG_Spec (pf_order | dag_id, schedule, start_date) = dag
+  val name = dag_id
   val () = println! ("[EXECUTION] Executing DAG nodes in topological order:")
 
   // Step 1: extract
@@ -90,7 +92,8 @@ implement {u,v,w} execute_dag (dag) = let
   val () = println! ("  Executing node: ", id3, " (operator: bash, command: ", cmd3, ")")
   val ret = $extfcall (int, "system", "echo 'loading data'")
 
-  val () = println! ("[COMPLETED] DAG '", dag_id, "' completed successfully with exit code ", ret)
+  val () = println! ("[COMPLETED] DAG '", name, "' completed successfully with exit code ", ret)
+  prval () = fold@ (dag)
 in
   ret
 end
