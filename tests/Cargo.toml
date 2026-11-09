@@ -1,0 +1,26 @@
+[package]
+name = "holo-tests"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+holo-core = { path = "../crates/holo-core" }
+holo-store = { path = "../crates/holo-store" }
+holo-ir = { path = "../crates/holo-ir" }
+holo-qasm = { path = "../crates/holo-qasm" }
+holo-compiler = { path = "../crates/holo-compiler" }
+holo-simulator = { path = "../crates/holo-simulator" }
+holo-assurance = { path = "../crates/holo-assurance" }
+holo-view = { path = "../crates/holo-view" }
+
+[[test]]
+name = "conformance"
+path = "conformance/conformance_test.rs"
+
+[[test]]
+name = "differential"
+path = "differential/differential_test.rs"
+
+[[test]]
+name = "reproducibility"
+path = "reproducibility/reproducibility_test.rs"

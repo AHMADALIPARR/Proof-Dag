@@ -1,0 +1,23 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/holo-core",
+    "crates/holo-store",
+    "crates/holo-qasm",
+    "crates/holo-ir",
+    "crates/holo-compiler",
+    "crates/holo-simulator",
+    "crates/holo-assurance",
+    "crates/holo-view",
+    "crates/holo-cli",
+    "tests",
+]
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+sha3 = "0.10"
+num-bigint = "0.4"
+num-rational = "0.4"
+num-traits = "0.2"
+thiserror = "1.0"

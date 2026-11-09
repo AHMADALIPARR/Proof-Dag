@@ -1,0 +1,11 @@
+[package]
+name = "holo-view"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+holo-core = { path = "../holo-core" }
+holo-store = { path = "../holo-store" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
