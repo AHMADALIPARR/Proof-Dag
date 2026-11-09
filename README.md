@@ -63,7 +63,7 @@ Gherkin + JSON Schemas"]
 
     subgraph Presentation["Presentation"]
         View["holo-view
-Graph Export + Terminal Viz"]
+Graph Export + Terminal Viz"
     end
 
     QASM --> CLI
