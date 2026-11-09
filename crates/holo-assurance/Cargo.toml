@@ -1,0 +1,14 @@
+[package]
+name = "holo-assurance"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+holo-core = { path = "../holo-core" }
+holo-ir = { path = "../holo-ir" }
+holo-store = { path = "../holo-store" }
+holo-simulator = { path = "../holo-simulator" }
+holo-compiler = { path = "../holo-compiler" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }

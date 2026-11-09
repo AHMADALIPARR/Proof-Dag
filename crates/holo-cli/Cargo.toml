@@ -1,0 +1,21 @@
+[package]
+name = "holo-cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "holo"
+path = "src/main.rs"
+
+[dependencies]
+holo-core = { path = "../holo-core" }
+holo-store = { path = "../holo-store" }
+holo-qasm = { path = "../holo-qasm" }
+holo-ir = { path = "../holo-ir" }
+holo-compiler = { path = "../holo-compiler" }
+holo-simulator = { path = "../holo-simulator" }
+holo-assurance = { path = "../holo-assurance" }
+holo-view = { path = "../holo-view" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }

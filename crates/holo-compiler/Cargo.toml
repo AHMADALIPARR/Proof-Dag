@@ -1,0 +1,13 @@
+[package]
+name = "holo-compiler"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+holo-core = { path = "../holo-core" }
+holo-ir = { path = "../holo-ir" }
+holo-qasm = { path = "../holo-qasm" }
+holo-store = { path = "../holo-store" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }

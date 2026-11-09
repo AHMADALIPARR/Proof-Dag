@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HolospacesNode",
+  "type": "object",
+  "required": [
+    "id",
+    "schema_version",
+    "node_type",
+    "created_at",
+    "content_hash",
+    "payload_hash",
+    "parents",
+    "dependencies",
+    "metadata",
+    "payload",
+    "signatures",
+    "evidence",
+    "tags"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^holo:sha3-256:[a-f0-9]{64}$"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "node_type": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "content_hash": {
+      "type": "string",
+      "pattern": "^sha3-256:[a-f0-9]{64}$"
+    },
+    "payload_hash": {
+      "type": "string",
+      "pattern": "^sha3-256:[a-f0-9]{64}$"
+    },
+    "parents": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
